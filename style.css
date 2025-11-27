@@ -1,0 +1,270 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    /* Fallback background (works in all browsers) */
+    background-image: url("assets/img/georgio-the-goober-1600.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Global text color: readable green */
+    color: #000000;
+}
+
+/* Prefer WebP via image-set when supported */
+@supports (background-image: image-set(url("a.webp") type("image/webp"))) {
+    html, body {
+        background-image: image-set(
+          url("assets/img/crem.jpg") type("image/jpeg")
+        );
+    }
+}
+
+/* Use fixed background on wider screens for a subtle parallax; avoid on small screens for performance */
+@media (min-width: 900px) {
+    html, body {
+        background-attachment: fixed;
+    }
+}
+
+/* Simple button-style for links used as actions */
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.15s ease-in-out, transform 0.05s ease;
+}
+
+.btn:hover {
+    background-color: #444;
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "BBH Sans Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.oswald-500 {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.oswald-600 {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.oswald-700 {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+a.hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Hero (full-screen) — transparent so body background shows through */
+.hero {
+    position: relative;
+    /* Fill the viewport */
+    min-height: 100vh;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 1rem; /* horizontal padding only so the hero truly fills vertically */
+    background: transparent; /* let the `html, body` background cover the page */
+}
+
+/* (Hero background moved to html/body; remove per-element image-set override) */
+
+/* Navigation (kept in same place) */
+nav {
+    opacity: 0;
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+}
+
+header button {
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+}
+
+nav ul li {
+    border: 1px solid white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+}
+
+nav ul li a:active {
+    background-color: #e01c1c;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px)  and (max-width: 900px) {
+    section {
+        display: inline-block;
+        width: 45%;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 930px) {
+
+    nav {
+        display: block;
+        opacity: 1;
+        position: relative;
+        text-align: left;
+    }
+
+    nav ul li {
+        border: none;
+    }
+
+    section {
+        display: inline-block;
+        width: 30%;
+    }
+
+    #desktop-section{
+        display: inline-block;
+    }
+
+    header button {
+        display: none;
+    }
+
+    nav ul { 
+        opacity: 1;
+        display: block;
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+
+} 
+
+/* Feature section styles for responsive image + text */
+.feature {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.feature img {
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.feature-text {
+    font-family: "Oswald", sans-serif;
+}
+
+/* Image container for side-by-side layout */
+.image-container {
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+    flex-wrap: wrap; /* Allow wrapping to the next line if necessary */
+    margin: 1rem; /* Space between images */
+}
+
+.image-container img {
+    max-width: 30%; /* Adjust width as needed */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem; /* Space between individual images */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.35));
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.hero .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin: 0.5rem 0 1rem;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        /* keep a little vertical padding so content doesn't touch edges on small screens */
+        padding: 2rem 1rem;
+    }
+}
+
+/* Use fixed background on wider screens for a subtle parallax effect; avoid on small screens for performance */
+@media (min-width: 900px) {
+    .hero {
+        background-attachment: fixed;
+    }
+}
+
+@media(min-width:900px){
+    .feature { grid-template-columns: 1fr 1fr; }
+}

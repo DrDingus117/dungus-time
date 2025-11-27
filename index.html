@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dungus Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Oswald&display=swap');
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+
+<body>
+    <header>
+        <nav id="nav-list">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button type="button" onclick="toggleMenu(event)">=</button>
+    </header>
+    <section class="hero" aria-label="Intro hero">
+        <div class="hero-content">
+            <h1>Home</h1>
+            <p class="subtitle">Welcome to the dungus site — I'm Marcus!</p>
+            <a class="btn" href="#desktop-section">See my skills</a>
+        </div>
+    </section>
+
+    <section>
+        <h2>
+            Who am I, and who is the good boi on the screen?
+        </h2>
+        <figure>
+            <picture>
+                <source type="image/webp" srcset="assets/img/georgio-the-goober-800.webp 800w, assets/img/georgio-the-goober-1600.webp 1600w" sizes="(max-width:600px) 100vw, 50vw">
+                <source type="image/jpeg" srcset="assets/img/georgio-the-goober-800.jpg 800w, assets/img/georgio-the-goober-1600.jpg 1600w" sizes="(max-width:600px) 100vw, 50vw">
+                <img src="assets/img/georgio-the-goober-800.jpg"
+                     alt="Georgio the Goober sitting on a bed"
+                     width="500" height="600"
+                     loading="lazy"
+                     style="max-width:100%;height:auto;display:block;">
+            </picture>
+            <figcaption>Moms bed (he's usually there).</figcaption>
+        </figure>
+
+        <p>
+            Hello, I'm Marcus! I have Autism, love gaming, and I'm going for either a Software Development or Cybersecurity degree in college.
+        </p>
+
+        <p>
+            This is Georgio the Goober. King of the goobers. We've had him for years — he lived with dad for a time but now is with us at mom's.
+        </p>
+    </section>
+    <section>
+        <h2>
+         Projects I've worked on
+        </h2>
+        <figure>
+            <picture>
+                <source type="image/webp" srcset="assets/img/code-800.webp 800w, assets/img/code-1600.webp 1600w" sizes="(max-width:600px) 100vw, 50vw">
+                <source type="image/jpeg" srcset="assets/img/code-800.jpg 800w, assets/img/code-1600.jpg 1600w" sizes="(max-width:600px) 100vw, 50vw">
+                <img src="assets/img/code-800.jpg" alt="Codecademy screenshot" width="500" height="500" loading="lazy" style="max-width:100%;height:auto;display:block;"/>
+            </picture>
+            <figcaption>Screenshot from the Introduction to IT assignments</figcaption>
+        </figure>
+        <p>
+        From September to November, Codecademy helped me learn the basics outside the classroom. It does have a subscription, which is fine for learning for a year or so. I wonder if Cyber Security will require this?
+        </p>
+        <p>
+        I just have this final project to do for these 3 classes before I can let my mind rest for the rest of the month.
+        </p>
+    </section>
+    <section id="desktop-section">
+        <h2>
+           What skills do i have?
+        </h2>
+        <p>
+            <picture>
+                <source type="image/webp" srcset="assets/img/steam-deck-800.webp 800w, assets/img/steam-deck-1600.webp 1600w" sizes="(max-width:600px) 100vw, 33vw">
+                <source type="image/jpeg" srcset="assets/img/steam-deck-800.jpg 800w, assets/img/steam-deck-1600.jpg 1600w" sizes="(max-width:600px) 100vw, 33vw">
+                <img src="assets/img/steam-deck-800.jpg" alt="Steam Deck" width="400" height="333" loading="lazy" style="max-width:100%;height:auto;display:block;">
+            </picture>
+            <figcaption>The Deck is just an example.</figcaption>
+            
+            I have somewhat experiance for taking apart and putting things back togheter, for example I have taken apart my Steam Deck several times to swap a drive, and fix up the R1 bumper. Recently though I decided to spend a day installing a new OS named Bazzite. Apparently it's better than SteamOS for gaming despite in my test with Marvel's Spider-Man Remastered I didn' notize any big changes to preformance.
+             
+            Most companies rather just say no to repairing or upgrading your devices so they can make more money off of you buying a new device everytime one breaks. This is where Right to Repair comes in. but even if they succeeded in having big corperations allow people to repair their device, there's a caviot... they can just hike the prices of parts just to nab your cash.
+
+            There is a commpany that sells parts and computers you can fix called Frameworrk. They sell things like addable storage, ram, you can add different slots, you can replace the keyboard, and screen everything on it can be repaired. Might get one eventually.
+        </p>
+    </section>
+<section>
+    <h2>Random images I don't have any rhyme or reasoning for except they've been on my laptop for weeks.</h2>
+    <div class="image-container">
+        <img src="assets/img/crem.jpg" alt="Description of image 1" loading="lazy">
+        <img src="assets/img/sb300.jpg" alt="Description of image 2" loading="lazy">
+        <img src="assets/img/3dsll.jpg" alt="Description of image 3" loading="lazy">
+        <img src="assets/img/monster.jpg" alt="Description of image 4" loading="lazy">
+        <img src="assets/img/meeting and feast of the goobers.jpg" alt="Description of image 5" loading="lazy">
+        <img src="assets/img/cool bnuuy.jpg" alt="Description of image 6" loading="lazy">
+    
+    </div>
+</section>
+
+
+        </section>
+    <footer>
+        <p>Copyright 2025 should be done saturday</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
