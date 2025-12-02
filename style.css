@@ -21,7 +21,7 @@ html, body {
 @supports (background-image: image-set(url("a.webp") type("image/webp"))) {
     html, body {
         background-image: image-set(
-          url("assets/img/george.jpg") type("image/jpeg")
+          url("assets/img/gooberous\ george.jpg") type("image/jpeg")
         );
     }
 }
